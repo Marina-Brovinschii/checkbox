@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkbox | Poze</title>
+    <link rel="stylesheet" href="<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Skranji&display=swap" rel="stylesheet">
+    <Style>
+        body {
+            background-image:url(41-1520x810.jpg);
+            width: 1525px;
+            height: 815px;
+            background-size: cover;
+        }
+        .baza {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .info {
+            display: inline-block;
+            width: 300px;
+            height: 30px;
+            background-color: #20B2AA;
+            font-family: 'Skranji', cursive;
+            font-size: 20px;
+            text-align: center;
+            padding-top: 5px;
+        }
+        .baza .info {
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .baza .info:hover {
+            background-color: khaki;
+        }
+        .baza .info label::after {
+            content: "▼";
+        }
+        .baza .info input {
+            display: none;
+        }
+        .baza .info ul {
+            opacity: 0;
+        }
+        .baza .info input:checked+label+ul {
+            display: inline-block;
+            opacity: 1;
+            animation: lista 2s;
+        }
+        .baza .info input:checked+label::after {
+            content: "▲";
+        }
+        .baza .image {
+            width: 300px;
+            height: 200px;
+        }
+        .baza ul {
+            padding: 0;
+            margin: 0;
+            background-color: skyblue;
+        }
+        .baza li {
+            list-style: none;
+            margin-top: 10px;
+        }
+        @keyframes lista {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+    </Style>
+</head>
+<body>
+    <nav class="baza">
+        <div class="info">
+           <input id="mare" type="checkbox">
+           <label for="mare">MARE</label>
+        <ul>
+            <li><img class="image" src="beach-1852945_1280.jpg" alt=""></li>
+            <li><img class="image" src="polynesia-3021072_1280.jpg" alt=""></li>
+            <li><img class="image" src="seashells-1337565_1280.jpg" alt=""></li>
+        </ul>
+    </div>
+       <div class="info">
+        <input id="munte" type="checkbox">
+        <label for="munte">MUNTE</label>
+        <ul>
+            <li><img class="image" src="ama-dablam-2064522_1280.jpg" alt=""></li>
+            <li><img class="image" src="lake-1681485_1280.jpg" alt=""></li>
+            <li><img class="image" src="schilthorn-3033448_1280.jpg" alt=""></li>
+        </ul>
+    </div>
+       <div class="info">
+        <input id="cascada" type="checkbox">
+        <label for="cascada">CASCADA</label>
+        <ul>
+            <li><img class="image" src="waterfall-2795063_1280.jpg" alt=""></li>
+            <li><img class="image" src="waterfall-6237479_1280.jpg" alt=""></li>
+            <li><img class="image" src="waterfall-800055_1280.jpg" alt=""></li>
+        </ul>
+    </div>
+       <div class="info">
+        <input id="desert" type="checkbox">
+        <label for="desert">DESERT</label>
+        <ul>
+            <li><img class="image" src="desert-1270345_1280.jpg" alt=""></li>
+            <li><img class="image" src="desert-1654439_1280.jpg" alt=""></li>
+            <li><img class="image" src="desert-4940300_1280.jpg" alt=""></li>
+        </ul>
+    </div>
+    </nav>
+</body>
+</html>
